@@ -19,10 +19,9 @@ jobs:
           python-version: '3.8'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Install pylint
-        run: pip install pylint
+        run: |
+          pip install -r requirements.txt
+          pip install pylint black pytest
 
       - name: Run pylint
         run: pylint src/
