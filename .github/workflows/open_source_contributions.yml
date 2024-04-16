@@ -7,7 +7,7 @@ on:
 
 jobs:
   linting_and_testing:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -24,8 +24,8 @@ jobs:
           pip install pylint black pytest
 
       - name: Run pylint
-        run: /opt/hostedtoolcache/Python/3.8.18/x64/bin/pylint src/
-
+        run: /usr/local/bin/pylint
+        
       - name: Format code
         run: black src/
 
