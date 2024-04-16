@@ -27,7 +27,7 @@ jobs:
       - name: Run tests
         run: pytest tests/
 
-      - name: Deploy to production
-        if: github.ref == 'refs/heads/main'
-        run: |
-          # Add deployment steps here, such as deploying to a server or cloud platform
+      # - name: Deploy to production
+      #  if: github.ref == 'refs/heads/main'
+      #  run: |
+      #    # Add deployment steps here, such as deploying to a server or cloud platform
