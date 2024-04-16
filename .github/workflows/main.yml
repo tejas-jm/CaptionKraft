@@ -1,0 +1,31 @@
+name: Open Source Contributions Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  linting_and_testing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Lint code
+        run: pylint src/
+
+      - name: Format code
+        run: black src/
+
+      - name: Run unit tests
+        run: pytest tests/
