@@ -1,5 +1,5 @@
 from library_setup import *
-
+#test2
 IMAGES_PATH = "flickr30k_images/flickr30k_images"
 CAPTIONS_PATH = "flickr30k_images/results.csv"
 
