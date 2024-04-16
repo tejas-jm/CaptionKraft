@@ -24,7 +24,7 @@ jobs:
           pip install pylint black pytest
 
       - name: Run pylint
-        run: opt/hostedtoolcache/Python/3.8.18/x64/bin/pylint
+        run: pylint ./
         
       - name: Format code
         run: black src/
