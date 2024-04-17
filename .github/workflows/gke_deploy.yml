@@ -10,7 +10,7 @@ env:
   GKE_CLUSTER: cluster-1    
   GKE_ZONE: us-central1-c   
   DEPLOYMENT_NAME: gke-caption-cluster
-  REPOSITORY: samples # TODO: update to Artifact Registry docker repository
+  REPOSITORY: docker_artifact
   IMAGE: static-site
 
 jobs:
